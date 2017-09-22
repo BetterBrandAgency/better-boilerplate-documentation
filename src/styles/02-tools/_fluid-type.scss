@@ -1,0 +1,57 @@
+/////
+//
+// Responsive Typography Mixin
+//
+// Create responsive typography with min and max font-sizes,
+// the mixin uses CSS locking to 'lock' the font size at the
+// min and max sizes provided at certain breakpoints.
+//
+// Useage:
+// @include fluid-type(16px, 24px, 650px, 1200px);
+//
+/////
+
+@mixin fluid-type($min-font-size, $max-font-size, $break-start, $break-end) {
+
+    /////
+    // y = mx + b Calculations
+    /////
+
+    // Calculate M: m = (y2 - y1) / (x2 - x1)
+    $m: (strip-unit($max-font-size) - strip-unit($min-font-size)) / (strip-unit($break-end) - strip-unit($break-start));
+
+    // Calculate B: b = y - mx
+    $b: #{$min-font-size - $m * $break-start};
+
+    // Calculate mx – m * viewport-width
+    $mx: #{$m * 100vw};
+
+    /////
+    // Unit Calculations
+    /////
+    $break-start-pixels: rem-to-px($break-start); // Convert $break-start to pixels
+    $break-end-pixels: rem-to-px($break-end); // Convert $break-end to pixels
+
+    $break-stop: $break-end-pixels - 1px; // Calulate the pixel width to end at
+
+    $small-rem: px-to-rem($min-font-size); // Get bottom end fallback font-size
+    $large-rem: px-to-rem($max-font-size); // Get top end fallback font-size
+
+    /////
+    // Output
+    /////
+
+    font-size: #{$min-font-size}; // Provide fallback for bottom end font-size
+    font-size: #{$small-rem}; // Output the bottom end font-size
+
+    @media (min-width: #{$break-start}) {
+        font-size: #{($min-font-size + $max-font-size) / 2}; // Calculate middle font-size for fallback
+        font-size: calc(#{$mx} + #{$b}); // Generate calc() equation for the responsive font-size
+    }
+
+    @media (min-width: $break-end) {
+        font-size: #{$max-font-size}; // Provide fallback for top end fallback
+        font-size: #{$large-rem}; // Output the top end font-size
+    }
+
+}

@@ -1,0 +1,65 @@
+/////
+//
+// Page Layout
+//
+/////
+
+@if $use-page-layout == true {
+
+	$page-breakpoint: $base-spacing-unit * 35;
+
+	.page-layout {
+
+		@media screen and (min-width: $page-breakpoint) {
+
+			display: inline-block;
+
+			@supports(display: flex) {
+				display: flex;
+			}
+
+			@supports(display: grid) {
+				display: grid;
+				grid-template-areas: "content sidebar";
+				grid-template-columns: minmax(auto ,percentage(4.25/7)) minmax(auto, percentage(2.75/7));
+				grid-column-gap: $base-spacing-unit * 2;
+			}
+
+			&__main-container {
+				@include flex(0, 1, percentage(4.5/7));
+
+				@supports(display: grid) {
+					grid-area: content;
+					flex: none;
+				}
+
+			}
+
+			&__sidebar-container {
+				@include flex(1, 0, percentage(2.5/7));
+
+				@supports(display: grid) {
+					grid-area: sidebar;
+					flex: none;
+				}
+
+			}
+
+			@supports not (display: grid) {
+
+				// Padding
+				& > *:nth-child(1) {
+					padding-right: $half-spacing-unit;
+				}
+
+				& > *:nth-child(2) {
+					padding-left: $half-spacing-unit;
+				}
+
+			}
+
+		}
+
+	}
+
+}

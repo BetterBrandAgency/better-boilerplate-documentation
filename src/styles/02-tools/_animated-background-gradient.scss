@@ -1,0 +1,28 @@
+/////
+//
+// Mixin - Animated Gradient Background
+//
+//@include animated-background-gradient(
+// 	rgba(255,255,255,0.4), // colour one
+// 	rgba(255,255,255,1), // colour two
+// 	rgba(255,255,255,0.4), // colour three
+// 	135deg, // background angle
+// 	30s, // length
+// 	infinite // iteration
+// );
+//
+/////
+
+@mixin animated-background-gradient($colour-one: rgba(255,255,255,0.2), $colour-two: rgba(255,255,255,0.8), $colour-three: rgba(255,255,255,0.2), $angle: 135deg, $length: 30s, $iteration: infinite) {
+	background: $colour-one;
+	background: linear-gradient($angle, $colour-one 0%, $colour-two 50%, $colour-three 100%);
+	background-size: 500% 500%;
+	animation: animation-background-gradient $length linear $iteration;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+}

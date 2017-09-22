@@ -1,0 +1,46 @@
+/////
+//
+// Headings
+//
+/////
+
+$responsive-start: 		(rem-to-px($base-spacing-unit * 22));
+$responsive-end: 		(rem-to-px($base-spacing-unit * 60));
+
+@include headings(1, 6) {
+	line-height: ($modular-scale + $modular-scale-two) / 2;
+	font-weight: 300;
+}
+
+h1,
+.h1 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 6), modular-scale($base-font-size, $modular-scale-two, 9), $responsive-start, $responsive-end);
+	color: $color-alpha;
+}
+
+h2,
+.h2 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 5), modular-scale($base-font-size, $modular-scale-two, 6), $responsive-start, $responsive-end);
+	color: $color-alpha;
+}
+
+h3,
+.h3 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 4), modular-scale($base-font-size, $modular-scale-two, 5), $responsive-start, $responsive-end);
+	color: $color-alpha;
+}
+
+h4,
+.h4 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 3), modular-scale($base-font-size, $modular-scale-two, 4), $responsive-start, $responsive-end);
+}
+
+h5,
+.h5 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 2), modular-scale($base-font-size, $modular-scale-two, 3), $responsive-start, $responsive-end);
+}
+
+h6,
+.h6 {
+	@include fluid-type(modular-scale($base-font-size, $modular-scale-two, 1), modular-scale($base-font-size, $modular-scale-two, 2), $responsive-start, $responsive-end);
+}

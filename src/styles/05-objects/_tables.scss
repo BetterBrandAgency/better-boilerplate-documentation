@@ -1,0 +1,17 @@
+/////
+//
+// Tables
+//
+/////
+
+$table-header-bg-colour: $color-alpha;
+$table-header-colour: white;
+
+.table {
+
+	th {
+		background-color: $table-header-bg-colour;
+		color: $table-header-colour;
+	}
+
+}

@@ -1,0 +1,21 @@
+/////
+//
+// Text
+//
+/////
+
+.word-wrap {
+	@extend %word-wrap;
+}
+
+.text {
+
+	&--16 {
+		@include font-size(16px, false, false);
+	}
+
+	&--20 {
+		@include font-size(20px, false, false);
+	}
+
+}

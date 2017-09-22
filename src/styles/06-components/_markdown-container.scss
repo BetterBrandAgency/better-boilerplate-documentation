@@ -1,0 +1,35 @@
+//
+// Markdown Container
+// styles elements based on element type due to content being imported via markdown
+//
+
+.markdown-container {
+
+	h1 {
+		margin-bottom: $base-spacing-unit * 2;
+	}
+
+	h2 {
+		position: relative;
+		padding-left: 1.5em;
+
+		&::before {
+			content: '';
+			background-image: url('../images/terminal.svg');
+			width: 1em;
+			height: 1em;
+			position: absolute;
+			background-size: contain;
+			top: 0.8rem;
+			left: 0;
+		}
+
+	}
+
+	h1, h2, h3 {
+		margin-top: $base-spacing-unit * 2;
+		padding-bottom: $base-spacing-unit;
+		border-bottom: 1px dashed $color-border;
+	}
+
+}
