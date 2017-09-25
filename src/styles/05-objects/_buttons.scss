@@ -3,3 +3,68 @@
 // Buttons
 //
 /////
+
+$color-list: (
+	alpha $color-alpha white,
+	bravo $color-bravo white,
+	twitter $color-twitter white,
+	error $color-error white,
+	warning $color-warning white,
+	success $color-success white,
+	grey $color-base-text white
+);
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	padding: $half-spacing-unit $base-spacing-unit;
+	text-decoration: none;
+	line-height: 1;
+	transition: background-color 150ms;
+	font-weight: 700;
+
+	&__icon {
+		max-width: $base-spacing-unit * 0.75;
+		max-height: $base-spacing-unit * 0.75;
+		margin-right: $half-spacing-unit * 0.75;
+	}
+
+	@include min-width($base-spacing-unit * 35) {
+
+		&--large {
+			@include font-size(18px, false, false);
+			padding: ($half-spacing-unit * 1.5) ($base-spacing-unit * 1.5);
+
+			.button__icon {
+				max-width: $base-spacing-unit;
+				max-height: $base-spacing-unit;
+				margin-right: $half-spacing-unit;
+			}
+
+		}
+
+	}
+
+}
+
+@each $name, $background-color, $text-color in $color-list {
+
+	.button--#{$name} {
+		background-color: $background-color;
+		color: $text-color;
+
+		&:hover {
+			background-color: darken($background-color, 10%);
+		}
+
+		.button__icon {
+			fill: $text-color;
+		}
+
+	}
+
+}
+
+.button + .button {
+	margin-top: $half-spacing-unit;
+}

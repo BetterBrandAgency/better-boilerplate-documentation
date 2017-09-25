@@ -44,25 +44,29 @@ pre[class*="language-"] {
 
 pre[class*="language-"]::-moz-selection {
 	/* Firefox */
-	background: hsl(200, 4%, 16%); /* #282A2B */
+	background: $color-alpha; /* #282A2B */
+	color: white;
 }
 
 pre[class*="language-"]::selection {
 	/* Safari */
-	background: hsl(200, 4%, 16%); /* #282A2B */
+	background: $color-alpha; /* #282A2B */
+	color: white;
 }
 
 /* Text Selection colour */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: hsla(0, 0%, 93%, 0.15); /* #EDEDED */
+	background: $color-alpha; /* #EDEDED */
+	color: white;
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: hsla(0, 0%, 93%, 0.15); /* #EDEDED */
+	background: $color-alpha; /* #EDEDED */
+	color: white;
 }
 
 /* Inline code */

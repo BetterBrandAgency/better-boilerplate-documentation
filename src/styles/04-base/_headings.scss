@@ -4,9 +4,6 @@
 //
 /////
 
-$responsive-start: 		(rem-to-px($base-spacing-unit * 22));
-$responsive-end: 		(rem-to-px($base-spacing-unit * 60));
-
 @include headings(1, 6) {
 	line-height: ($modular-scale + $modular-scale-two) / 2;
 	font-weight: 300;

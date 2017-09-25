@@ -1,3 +1,7 @@
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+
 function openOverlay() {
 	$('.js-overlay').addClass('is-open'); // Find element with the class 'js-menu-container' and apply an additional class of 'is-open'
 }
@@ -14,9 +18,54 @@ function updateMenuButton() {
 	$('.js-menu-button').find('.menu-icon').toggleClass('is-active');
 }
 
+
+function hasScrolled() {
+
+    var st = $('html, body').scrollTop();
+
+    if(Math.abs(lastScrollTop - st) <= delta){
+        return;
+    }
+
+    if (st > lastScrollTop){
+        $('.hero').addClass('has-scrolled');
+    }
+
+    else {
+
+    	if (st <= 100) {
+            $('.hero').removeClass('has-scrolled');
+        }
+
+    }
+
+    lastScrollTop = st;
+
+}
+
 svg4everybody();
 
-$(document).ready(function() {
+jQuery(document).ready(function($){
+
+	// Hero
+		setTimeout(function() {
+			$('.hero').addClass('has-delayed');
+		}, 3000);
+
+		hasScrolled();
+
+		$(window).scroll(function(event){
+		    didScroll = true;
+		});
+
+		setInterval(function() {
+		    if (didScroll) {
+		        hasScrolled();
+		        didScroll = false;
+		    }
+		}, 250);
+
+
 
 	// Select Menus
 		$('select').niceSelect();
@@ -168,14 +217,6 @@ $(document).ready(function() {
 		$('.js-overlay-close').click(function(){
 			closeOverlay();
 			updateOverlayButton();
-		});
-
-	// Smooth Scrolling
-		$('#toc a').click(function(){
-			console.log('clicked');
-		    $('html, body').animate({
-		        scrollTop: $( $(this).attr('href') ).offset().top
-		    }, 500);
 		});
 
 });

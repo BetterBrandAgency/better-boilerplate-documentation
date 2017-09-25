@@ -10,6 +10,7 @@
 @import "01-settings/colours";
 @import "01-settings/modules-and-widgets";
 @import "01-settings/global-properties";
+@import "01-settings/global-breakpoints";
 
 // Import Tools - Mixins
 @import "02-tools/clearfix";
@@ -68,6 +69,8 @@
 @import "06-components/overlay";
 @import "06-components/markdown-container";
 @import "06-components/sidebar";
+@import "06-components/hero";
+@import "06-components/table-of-contents";
 
 // Widgets - 3rd Party Libraries
 @import "07-widgets/nice-select";

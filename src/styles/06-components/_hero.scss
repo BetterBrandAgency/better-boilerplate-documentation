@@ -1,0 +1,133 @@
+//
+// Hero
+//
+
+.hero {
+	position: relative;
+	min-height: 100vh;
+	background-color: $color-border;
+	display: flex;
+	align-items: center;
+
+	&__content {
+		text-align: center;
+	}
+
+	&__logo {
+		fill: $color-alpha;
+		width: 25%;
+		height: 1em;
+		max-width: 212px;
+		max-height: 43px;
+		margin-bottom: $base-spacing-unit / 2;
+	}
+
+	&__title {
+		@include fluid-type(modular-scale($base-font-size, $modular-scale, 1), modular-scale($base-font-size, $modular-scale-two, 11), $responsive-start, $responsive-end);
+		line-height: 1;
+		color: $color-base-text;
+		margin-bottom: $base-spacing-unit;
+
+		@include min-width($responsive-start) {
+			margin-bottom: $base-spacing-unit * 2.5;
+		}
+
+	}
+
+	&__illustration {
+		width: 100%;
+		max-width: $base-spacing-unit * 24;
+		margin-bottom: $base-spacing-unit;
+
+		@include min-width($responsive-start) {
+			margin-bottom: $base-spacing-unit * 2.5;
+		}
+	}
+
+	&__button {
+		margin-right: $base-spacing-unit / 4;
+	}
+
+	&__scroll-indicator {
+
+		&::before {
+			content: '';
+			border: 2px solid $color-form-border;
+			border-radius: 1.5rem;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 1.5rem;
+			height: 2.5rem;
+			-webkit-backface-visibility: hidden;
+			transform: translate(-50%, -50%);
+			z-index: 50;
+			cursor: pointer;
+			opacity: 0;
+			visibility: visible;
+			transition: all 250ms;
+		}
+
+		&::after {
+			content: '';
+			background-color: $color-form-border;
+			border-radius: 100%;
+			position: absolute;
+			bottom: 2.75rem;
+			left: 50%;
+			margin-left: -0.125rem;
+			width: 0.25rem;
+			height: 0.25rem;
+			opacity: 0;
+			transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
+			z-index: 50;
+			pointer-events: none;
+			visibility: visible;
+			transition: all 250ms;
+		}
+
+	}
+
+	@keyframes scroll {
+
+		0%, 20% {
+			transform: translateY(0) scaleY(1) scaleX(1) translateZ(0);
+		}
+
+		10% {
+			transform: translateY(0) scaleY(1.2) scaleX(1.2) translateZ(0);
+			opacity: 1;
+		}
+
+		100% {
+			transform: translateY(1.5rem) scaleY(2.5) scaleX(0.5) translateZ(0);
+			opacity: 0.01;
+		}
+
+	}
+
+	&.has-delayed {
+
+		.hero__scroll-indicator::before,
+		.hero__scroll-indicator::after {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.hero__scroll-indicator::after {
+			animation: scroll 1.5s -1s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+		}
+
+	}
+
+	&.has-scrolled {
+
+		.hero__scroll-indicator::before,
+		.hero__scroll-indicator::after {
+			visibility: hidden;
+			opacity: 0 !important;
+		}
+
+	}
+
+}
