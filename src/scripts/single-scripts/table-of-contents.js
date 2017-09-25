@@ -33,7 +33,7 @@
      */
     var createList = function ($wrapper, count) {
         while (count--) {
-            $wrapper = $('<ul/>').appendTo($wrapper);
+            $wrapper = $('<ol/>').appendTo($wrapper);
 
             if (count) {
                 $wrapper = $('<li/>').appendTo($wrapper);
@@ -92,7 +92,7 @@
         var selector = options.selector;
         var scope = options.scope;
 
-        var $ret = $('<ul/>');
+        var $ret = $('<ol/>');
         var $wrapper = $ret;
         var $lastLi = null;
 

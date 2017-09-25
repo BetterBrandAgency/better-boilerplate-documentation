@@ -1522,7 +1522,8 @@ input:checked + .radio__label::after {
   -ms-flex-align: center;
       align-items: center; }
   .hero__content {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
   .hero__logo {
     fill: #E2007C;
     width: 25%;
@@ -1549,7 +1550,7 @@ input:checked + .radio__label::after {
         margin-bottom: 4.045rem; } }
   .hero__illustration {
     width: 100%;
-    max-width: 38.832rem;
+    max-width: 55.012rem;
     margin-bottom: 1.618rem; }
     @media screen and (min-width: 569.536px) {
       .hero__illustration {

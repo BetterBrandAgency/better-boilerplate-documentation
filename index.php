@@ -7,24 +7,24 @@
         <div class="hero__content content-container--large padding--sides">
 
             <svg class="hero__logo svg">
-                <use xlink:href="/dist/images/sprite.svg/#better-logo" href="/dist/images/sprite.svg/#better-logo"></use>
+                <use xlink:href="dist/images/sprite.svg/#better-logo" href="dist/images/sprite.svg/#better-logo"></use>
             </svg>
 
             <h1 class="hero__title"><span class="is-visuallyhidden">Better.</span> Boilerplate</h1>
 
-            <img class="hero__illustration" src="/dist/images/hero-illustration.svg" alt="">
+            <img class="hero__illustration" src="dist/images/hero-illustration.svg" alt="">
 
             <div class="hero__buttons-container">
 
                 <a class="hero__button button button--large button--alpha" href="#">
                     <svg class="button__icon svg">
-                        <use xlink:href="/dist/images/sprite.svg/#download" href="/dist/images/sprite.svg/#download"></use>
+                        <use xlink:href="dist/images/sprite.svg/#download" href="dist/images/sprite.svg/#download"></use>
                     </svg>
                     Download
                 </a>
                 <a class="hero__button button button--large button--grey" href="#">
                     <svg class="button__icon svg">
-                        <use xlink:href="/dist/images/sprite.svg/#github" href="/dist/images/sprite.svg/#github"></use>
+                        <use xlink:href="dist/images/sprite.svg/#github" href="dist/images/sprite.svg/#github"></use>
                     </svg>
                     GitHub
                 </a>
@@ -46,7 +46,9 @@
                 <!-- <h2 class="padding-double--top padding--bottom">Table of Contents</h2>
                 <div class="[ js-toc table-of-contents ]"></div> -->
 
-                <div class="[ js-documentation-container ] markdown-container [ margin-double--bottom padding-double--bottom ]"></div>
+                <div class="[ js-documentation-container ] markdown-container [ margin-double--bottom padding-double--bottom ]">
+                    <a class="button button--alpha" href="/component-examples.php">Component Examples</a>
+                </div>
 
             </main>
 
@@ -79,7 +81,7 @@
             text      = data,
             html      = converter.makeHtml(text);
 
-            $('.js-documentation-container').append(html);
+            $('.js-documentation-container').prepend(html);
 
             $('.js-documentation-container pre code').each(function() {
                 $(this).parent('pre').addClass('language-scss');
