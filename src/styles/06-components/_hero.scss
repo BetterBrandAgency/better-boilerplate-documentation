@@ -38,11 +38,12 @@
 	&__illustration {
 		width: 100%;
 		max-width: $base-spacing-unit * 34;
-		margin-bottom: $base-spacing-unit;
+		margin: 0 auto $base-spacing-unit;
 
 		@include min-width($responsive-start) {
 			margin-bottom: $base-spacing-unit * 2.5;
 		}
+
 	}
 
 	&__button {

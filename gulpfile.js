@@ -280,20 +280,6 @@
 
             return gulp.src('src/images/**/*.svg') // Read from this directory
 
-                .pipe(svgmin({ // Minify SVGs
-                    plugins: [{
-                        removeDoctype: true // Remove DocType
-                    }, {
-                        removeComments: true // Remove Comments
-                    }, {
-                        cleanupNumericValues: {
-                            floatPrecision: 2 // Reduces file size
-                        }
-                    }, {
-                        removeStyleElement: false // Removes inline styles from SVGs
-                    }]
-                }))
-
                 .pipe(gulp.dest('dist/images')) // Spit out in 'dist/images'
 
         });

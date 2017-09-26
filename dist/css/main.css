@@ -1551,7 +1551,7 @@ input:checked + .radio__label::after {
   .hero__illustration {
     width: 100%;
     max-width: 55.012rem;
-    margin-bottom: 1.618rem; }
+    margin: 0 auto 1.618rem; }
     @media screen and (min-width: 569.536px) {
       .hero__illustration {
         margin-bottom: 4.045rem; } }

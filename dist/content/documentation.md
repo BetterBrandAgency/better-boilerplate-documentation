@@ -1,4 +1,5 @@
 # Better Boilerplate
+## Internal Introduction
 The Better Boilerplate should be used for all frontend projects. The boilerplate is made up of many different modules and will manage much of the frontend build process; containing the entire directory structure for your project.
 
 The Better Boilerplate carries very little "style" and consists mainly of file and directory structure and theme-able objects, components and widgets. This allows us to create the styles needed based on each design individually.
@@ -7,6 +8,7 @@ The boilerplate also includes a HTML pattern library for referencing, copying an
 
 We build a lot of websites at Better, most of them in WordPress, this boilerplate allows us to jump start the frontend build of projects and build websites quickly while still assuring code quality and complete control over the file sizes of the files in our projects.
 
+## External Introduction
 
 - - - -
 
@@ -30,13 +32,16 @@ Using the Better Boilerplate has a few prerequisites and assumes a working knowl
 The Better Boilerplate includes a build process powered by gulp and so requires some software to be installed.
 
 #### NPM
-NPM (Node Package Manager) is required to be able to run gulp tasks and compile the SCSS. Install: https://www.npmjs.com/
+NPM (Node Package Manager) is required to be able to run gulp tasks and compile the SCSS. Install:
+[npm](https://www.npmjs.com/)
 
 #### SASS/SCSS
-The Better Boilerplate is written in SCSS which is part of SASS (Syntactically Awesome Style Sheets) – SASS gives us access to features which are not readily available in vanilla CSS. Install: http://sass-lang.com/install
+The Better Boilerplate is written in SCSS which is part of SASS (Syntactically Awesome Style Sheets) – SASS gives us access to features which are not readily available in vanilla CSS. Install:
+[Sass: Install Sass](http://sass-lang.com/install)
 
 #### Gulp
-The Better Boilerplate makes use of Gulp as a task runner to help streamline some of the build process. Install: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
+The Better Boilerplate makes use of Gulp as a task runner to help streamline some of the build process. Install:
+[gulp/getting-started.md at master · gulpjs/gulp · GitHub](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 
 ### Installing
@@ -139,7 +144,8 @@ Many of the optional scripts require specific HTML in order to function correctl
 
 	Basic Skeleton HTML for creating an accordion
 	- Requires the accompanying Javascript Pattern
-	- Requires the $use-accordions setting to be set to true inside of src/styles/01-settings/_modules-and-widgets.scss
+	- Requires the $use-accordions setting to be set to true
+    inside of src/styles/01-settings/_modules-and-widgets.scss
 
 -->
 ```
@@ -621,7 +627,7 @@ The corresponding classes are;
 .content-container--large
 .content-container
 .content-container--small
-..content-container--smallest
+.content-container--smallest
 ```
 
 #### _flex-vertical.scss
@@ -985,4 +991,11 @@ The placeholder-polyfill will be used to add support for placeholders in IE9 and
 
 
 ## Browser Support
-Officially the Better Boilerplate supports IE10+ and all of the other modern browsers. Support for IE8+ could be provided with some work providing fallbacks for SVG's. There are some tools included in the CSS framework for providing flexbox and grid fallbacks to earlier versions of IE and for the modern browsers yet to support CSS Grid (soon to be none, yey!).µ
+Officially the Better Boilerplate supports IE10+ and all of the other modern browsers. Support for IE8+ could be provided with some work providing fallbacks for SVG's. There are some tools included in the CSS framework for providing flexbox and grid fallbacks to earlier versions of IE and for the modern browsers yet to support CSS Grid (soon to be none, yey!).
+
+
+- - - -
+
+
+## Optional Component Examples
+We've put together a page containing some of the components using their default styles.

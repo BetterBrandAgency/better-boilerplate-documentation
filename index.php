@@ -12,7 +12,12 @@
 
             <h1 class="hero__title"><span class="is-visuallyhidden">Better.</span> Boilerplate</h1>
 
-            <img class="hero__illustration" src="dist/images/hero-illustration.svg" alt="">
+            <!-- <img class="hero__illustration" src="dist/images/hero-illustration.svg" alt=""> -->
+            <div class="hero__illustration">
+
+                <?php include_once('dist/images/hero-illustration.svg');?>
+
+            </div>
 
             <div class="hero__buttons-container">
 
@@ -101,7 +106,7 @@
             $('a').click(function(e){
                 $('html, body').animate({
                     scrollTop: $( $(this).attr('href') ).offset().top
-                }, 500);
+                }, 1000);
             });
 
         });
