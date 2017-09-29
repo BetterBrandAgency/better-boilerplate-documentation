@@ -237,6 +237,7 @@
 
         #form-sent {
             opacity: 0;
+            transition: opacity 150ms;
             animation: fadeIn 1s 6.5s forwards, fadeOut 2s 10s forwards;
         }
 
@@ -257,7 +258,7 @@
         }
 
         .is-hidden {
-            display: none;
+            opacity: 0;
         }
 
     </style>

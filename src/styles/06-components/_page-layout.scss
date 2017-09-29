@@ -11,8 +11,10 @@
 	.page-layout {
 
 		@media screen and (min-width: $page-breakpoint) {
-
+			font-size: 0;
 			display: inline-block;
+			margin-left: -($half-spacing-unit);
+			margin-right: -($half-spacing-unit);
 
 			@supports(display: flex) {
 				display: flex;
@@ -23,12 +25,20 @@
 				grid-template-areas: "content sidebar";
 				grid-template-columns: minmax(auto ,percentage(4.25/7)) minmax(auto, percentage(2.75/7));
 				grid-column-gap: $base-spacing-unit * 2;
+				margin-left: 0;
+				margin-right: 0;
 			}
 
 			&__main-container {
-				@include flex(0, 1, percentage(4.5/7));
+				@include font-size($base-font-size, false, false);
+				@include flex(0, 0, percentage(4.5/7));
+				padding-left: $half-spacing-unit;
+				padding-right: $base-spacing-unit;
+				vertical-align: top; //IE FIX
 
 				@supports(display: grid) {
+					padding-left: 0;
+					padding-right: 0;
 					grid-area: content;
 					flex: none;
 				}
@@ -36,24 +46,15 @@
 			}
 
 			&__sidebar-container {
-				@include flex(1, 0, percentage(2.5/7));
+				@include font-size($base-font-size, false, false);
+				@include flex(0, 0, percentage(2.5/7));
+				padding-left: $base-spacing-unit;
+				padding-right: $base-spacing-unit;
+				vertical-align: top; //IE FIX
 
 				@supports(display: grid) {
 					grid-area: sidebar;
 					flex: none;
-				}
-
-			}
-
-			@supports not (display: grid) {
-
-				// Padding
-				& > *:nth-child(1) {
-					padding-right: $half-spacing-unit;
-				}
-
-				& > *:nth-child(2) {
-					padding-left: $half-spacing-unit;
 				}
 
 			}

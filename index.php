@@ -4,10 +4,10 @@
 
     <div class="hero">
 
-        <div class="hero__content content-container--large padding--sides">
+        <div class="hero__content [ content-container--large ] [ padding--sides padding-double--ends margin-double--ends ]">
 
             <svg class="hero__logo svg">
-                <use xlink:href="dist/images/sprite.svg/#better-logo" href="dist/images/sprite.svg/#better-logo"></use>
+                <use xlink:href="dist/images/sprite.svg#better-logo" href="dist/images/sprite.svg#better-logo"></use>
             </svg>
 
             <h1 class="hero__title"><span class="is-visuallyhidden">Better.</span> Boilerplate</h1>
@@ -15,7 +15,8 @@
             <!-- <img class="hero__illustration" src="dist/images/hero-illustration.svg" alt=""> -->
             <div class="hero__illustration">
 
-                <?php include_once('dist/images/hero-illustration.svg');?>
+                <img src="dist/images/hero-illustration.png" alt="">
+                <?php include_once('dist/images/hero-illustration-v2.svg');?>
 
             </div>
 
@@ -23,13 +24,14 @@
 
                 <a class="hero__button button button--large button--alpha" href="#">
                     <svg class="button__icon svg">
-                        <use xlink:href="dist/images/sprite.svg/#download" href="dist/images/sprite.svg/#download"></use>
+                        <use xlink:href="dist/images/sprite.svg#download" href="dist/images/sprite.svg#download"></use>
                     </svg>
                     Download
                 </a>
+
                 <a class="hero__button button button--large button--grey" href="#">
                     <svg class="button__icon svg">
-                        <use xlink:href="dist/images/sprite.svg/#github" href="dist/images/sprite.svg/#github"></use>
+                        <use xlink:href="dist/images/sprite.svg#github" href="dist/images/sprite.svg#github"></use>
                     </svg>
                     GitHub
                 </a>
@@ -52,7 +54,7 @@
                 <div class="[ js-toc table-of-contents ]"></div> -->
 
                 <div class="[ js-documentation-container ] markdown-container [ margin-double--bottom padding-double--bottom ]">
-                    <a class="button button--alpha" href="/component-examples.php">Component Examples</a>
+                    <a class="button button--alpha" href="component-examples.php">Component Examples</a>
                 </div>
 
             </main>
@@ -74,25 +76,30 @@
         crossorigin="anonymous">
     </script>
 
+    <script src="dist/js/svg4everybody.min.js"></script>
+    <script src="dist/js/showdown.min.js"></script>
     <script src="dist/js/prism.js"></script>
     <script src="dist/js/table-of-contents.js"></script>
 
-    <script>
+    <script type="text/javascript">
 
         // Get Documentation
         $.get('dist/content/documentation.md', function(data) {
 
-            var converter = new showdown.Converter(),
-            text      = data,
-            html      = converter.makeHtml(text);
+            // Markdown parser
+            var converter   = new showdown.Converter(),
+            text            = data,
+            html            = converter.makeHtml(text);
 
             $('.js-documentation-container').prepend(html);
 
+            // Code Highlightling
             $('.js-documentation-container pre code').each(function() {
                 $(this).parent('pre').addClass('language-scss');
                 Prism.highlightElement($(this)[0]);
             });
 
+            // Generate Table of Contents
             $('.js-toc').each(function() {
                 $(this).initTOC({
                     selector: 'h2, h3, h4',
@@ -110,6 +117,8 @@
             });
 
         });
+
+        svg4everybody();
 
     </script>
 

@@ -179,7 +179,7 @@
 
                 .pipe(babel({
                     presets: ['env'],
-                    ignore: ['siema.min.js', 'svg4everybody.min.js', 'showdown.min.js', 'prism.js']
+                    ignore: ['siema.min.js']
                 }))
 
                 .pipe(concat('main.js')) // Concatenate JS files
@@ -210,7 +210,7 @@
 
             .pipe(babel({
                 presets: ['env'],
-                ignore: ['siema.min.js', 'svg4everybody.min.js', 'showdown.min.js', 'prism.js']
+                ignore: ['siema.min.js']
             }))
 
             .pipe(concat('main.js')) // Concatenate JS files

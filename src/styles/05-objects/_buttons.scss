@@ -15,13 +15,22 @@ $color-list: (
 );
 
 .button {
-	display: inline-flex;
+	display: inline-block;
 	align-items: center;
 	padding: $half-spacing-unit $base-spacing-unit;
 	text-decoration: none;
 	line-height: 1;
 	transition: background-color 150ms;
 	font-weight: 700;
+
+	@supports(display: inline-flex) {
+		display: inline-flex;
+
+		> * {
+			flex: 0 0 auto;
+		}
+
+	}
 
 	&__icon {
 		max-width: $base-spacing-unit * 0.75;

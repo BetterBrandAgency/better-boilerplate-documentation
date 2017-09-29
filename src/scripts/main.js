@@ -18,7 +18,6 @@ function updateMenuButton() {
 	$('.js-menu-button').find('.menu-icon').toggleClass('is-active');
 }
 
-
 function hasScrolled() {
 
     var st = $('html, body').scrollTop();
@@ -42,8 +41,6 @@ function hasScrolled() {
     lastScrollTop = st;
 
 }
-
-svg4everybody();
 
 jQuery(document).ready(function($){
 
@@ -218,5 +215,12 @@ jQuery(document).ready(function($){
 			closeOverlay();
 			updateOverlayButton();
 		});
+
+	// Detect support of CSS Transforms in SVG
+		if (supportsCSSTransformsOnSVG) {
+
+			$('.hero__illustration').addClass('animation-supported');
+
+		}
 
 });

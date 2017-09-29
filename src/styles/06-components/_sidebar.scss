@@ -3,7 +3,11 @@
 //
 
 .sidebar {
-	padding: $base-spacing-unit;
+
+	@supports(display: grid) {
+		padding: $base-spacing-unit;
+	}
+
 	background-color: $color-alpha;
 	color: white;
 
