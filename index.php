@@ -10,7 +10,7 @@
                 <use xlink:href="dist/images/sprite.svg#better-logo" href="dist/images/sprite.svg#better-logo"></use>
             </svg>
 
-            <h1 class="hero__title"><span class="is-visuallyhidden">Better.</span> Boilerplate</h1>
+            <h1 class="hero__title"><span class="is-visuallyhidden">Better.</span>Boilerplate</h1>
 
             <!-- <img class="hero__illustration" src="dist/images/hero-illustration.svg" alt=""> -->
             <div class="hero__illustration">

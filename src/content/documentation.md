@@ -1,7 +1,7 @@
-# Better Boilerplate
+# BetterBoilerplate
 The boilerplate is made up of many different modules and will manage much of the frontend build process; containing the entire directory structure for your project.
 
-The Better Boilerplate carries very little "style" and consists mainly of file and directory structure and theme-able objects, components and widgets. This allows us to create the styles needed based on each design individually.
+The BetterBoilerplate carries very little "style" and consists mainly of file and directory structure and theme-able objects, components and widgets. This allows us to create the styles needed based on each design individually.
 
 The boilerplate also includes an HTML pattern library for referencing, copying and pasting commonly used elements and optional modules, this helps speed up our workflow as everything you need is included in the files contained in the boilerplate.
 
@@ -10,8 +10,8 @@ We build a lot of websites at Better, most of them in WordPress, this boilerplat
 We hope you can use this framework for the same purpose, if you find it useful hit the star button and feel free to fork the project and use what you need. Any issues/questions or feedback should be reported in the repo.
 
 
-## How to use the Better Boilerplate
-The Better Boilerplate can be used in anyway you would like, it has been designed to be edited, changed, updated and bastardised to fit the project at hand.
+## How to use the BetterBoilerplate
+The BetterBoilerplate can be used in anyway you would like, it has been designed to be edited, changed, updated and bastardised to fit the project at hand.
 
 This is not a going to create a "pretty" website out of the box, we work with awesomely talented designers, and it seems a shame for so many websites to look and feel the same.
 
@@ -22,27 +22,27 @@ This is not a going to create a "pretty" website out of the box, we work with aw
 
 
 ## Getting Started
-Using the Better Boilerplate has a few prerequisites and assumes a working knowledge of HTML, CSS, SCSS/SASS, BEM (Block, Element, Modifier) and Javascript.
+Using the BetterBoilerplate has a few prerequisites and assumes a working knowledge of HTML, CSS, SCSS/SASS, BEM (Block, Element, Modifier) and Javascript.
 
 
 ### Prerequisites
-The Better Boilerplate includes a build process powered by gulp and so requires some software to be installed.
+The BetterBoilerplate includes a build process powered by gulp and so requires some software to be installed.
 
 #### NPM
 NPM (Node Package Manager) is required to be able to run gulp tasks and compile the SCSS. Install:
 [npm](https://www.npmjs.com/)
 
 #### SASS/SCSS
-The Better Boilerplate is written in SCSS which is part of SASS (Syntactically Awesome Style Sheets) – SASS gives us access to features which are not readily available in vanilla CSS. Install:
+The BetterBoilerplate is written in SCSS which is part of SASS (Syntactically Awesome Style Sheets) – SASS gives us access to features which are not readily available in vanilla CSS. Install:
 [Sass: Install Sass](http://sass-lang.com/install)
 
 #### Gulp
-The Better Boilerplate makes use of Gulp as a task runner to help streamline some of the build process. Install:
+The BetterBoilerplate makes use of Gulp as a task runner to help streamline some of the build process. Install:
 [gulp/getting-started.md at master · gulpjs/gulp · GitHub](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 
 ### Installing
-Once you have downloaded the Better Boilerplate and included it in your project files you will need to install the required npm modules, to do this; navigate to the root directory of you project and run the following commands in terminal;
+Once you have downloaded the BetterBoilerplate and included it in your project files you will need to install the required npm modules, to do this; navigate to the root directory of you project and run the following commands in terminal;
 
 ```
 npm install
@@ -53,9 +53,9 @@ The first command will install the packages from npm and the second will make su
 
 
 ### Gulp Tasks
-The Better Boilerplate is making use of Gulp to automate much of the build process. You may wish to alter some of the settings in the gulpfile before beginning your project, such as the public or `/dist` directory or to add additional postCSS modules or tasks. To do this open the `gulpfile.js` found in the root directory of the Better Boilerplate and edit where necessary.
+The BetterBoilerplate is making use of Gulp to automate much of the build process. You may wish to alter some of the settings in the gulpfile before beginning your project, such as the public or `/dist` directory or to add additional postCSS modules or tasks. To do this open the `gulpfile.js` found in the root directory of the BetterBoilerplate and edit where necessary.
 
-The gulpfile is broken down into multiple tasks which can be run individually or all at once, all commands are run from the root directory of the Better Boilerplate in terminal:
+The gulpfile is broken down into multiple tasks which can be run individually or all at once, all commands are run from the root directory of the BetterBoilerplate in terminal:
 
 #### gulp
 Running the `gulp` command will run through most of the tasks in the gulp file and will continually listen for changes in any of the source files while automatically compiling them into the `/dist` directory and producing SASS maps for use in devtools.
@@ -152,7 +152,7 @@ The Javascript patterns included in the project are simple re-usable components 
 
 The Javascript patterns are written in jQuery as most of the time our projects are in WordPress and many WordPress plugins require jQuery to run anyway.
 
-The patterns included in the Better Boilerplate should be copied and pasted into the `main.js` file inside the `src/js` directory.
+The patterns included in the BetterBoilerplate should be copied and pasted into the `main.js` file inside the `src/js` directory.
 
 #### src
 The `/src` directory is where you will edit all of your CSS, Javascript, fonts, favicons and images. The directory structure inside the src directory is simple and fairly self explanatory;
@@ -164,7 +164,7 @@ Favicons should be placed in the `src/favicons` directory.
 Any custom fonts should be placed in the `src/fonts` directory.
 
 * **images**
-Images should be placed in the /src/images directory. Images placed into this directory are automatically optimised for the web and are, therefore, reduced in size. The compression settings used for the images can be adjusted from the `gulpfile.js` found in the root directory of the Better Boilerplate.
+Images should be placed in the /src/images directory. Images placed into this directory are automatically optimised for the web and are, therefore, reduced in size. The compression settings used for the images can be adjusted from the `gulpfile.js` found in the root directory of the BetterBoilerplate.
 
 * **scripts**
 The scripts directory contains a main.js file and two directories. The files contained in the `src/scripts/bundled-scripts` directory and, also, the main.js file will be minified and then compiled into `dist/js/main.min.js`. Files inside the second directory (`src/scripts/single-scripts`) will be moved into the same directory (`dist/js`) but each as a separate file, this directory should be used for scripts which will not be needed on all pages.
@@ -381,7 +381,7 @@ This layer contains all of the variables needed to turn settings on and off as w
 
 
 ### 02-tools
-The tools directory contains all of the mixins and other tools included in the Better Boilerplate. New mixins and tools can be added by creating new files inside the `src/styles/02-tools` directory. Since mixins don't output any code until they're used there is no harm in them being there and not being utilised, the other tools included are turned on and off using boolean variables in the settings directory. The tools and mixins included are;
+The tools directory contains all of the mixins and other tools included in the BetterBoilerplate. New mixins and tools can be added by creating new files inside the `src/styles/02-tools` directory. Since mixins don't output any code until they're used there is no harm in them being there and not being utilised, the other tools included are turned on and off using boolean variables in the settings directory. The tools and mixins included are;
 
 #### _animated-background-gradient.scss
 The animated background gradient mixin takes a number of values all of which are optional. The default settings for the animation are set to apply a shimmer effect using semi-transparent whites animating the gradient over 30 seconds and repeating the animation indefinitely.
@@ -521,7 +521,7 @@ The tools layer contains a number of mixins and other tools to help with a multi
 
 
 ### 03-generic
-The generic layer of the framework contains a CSS reset used to normalise the default CSS in all browsers. The Better Boilerplate uses `sanitize.css` (https://jonathantneal.github.io/sanitize.css/) for this reset layer.
+The generic layer of the framework contains a CSS reset used to normalise the default CSS in all browsers. The BetterBoilerplate uses `sanitize.css` (https://jonathantneal.github.io/sanitize.css/) for this reset layer.
 
 #### TL;DR
 This is the reset layer.
@@ -954,7 +954,7 @@ The file size of the CSS framework when compiled, minified and gzipped is ~`3kb`
 
 
 ## Browser Polyfills
-The Better Boilerplate makes use of HTML5 elements and some of the newer CSS3 elements available to designers and developers, to offer the best support we can for older browsers. The following files are included in the `src/scripts/single-scripts/` directory and will need including in the header of your website.
+The BetterBoilerplate makes use of HTML5 elements and some of the newer CSS3 elements available to designers and developers, to offer the best support we can for older browsers. The following files are included in the `src/scripts/single-scripts/` directory and will need including in the header of your website.
 
 ### html5-shiv
 The html5 shiv allows older versions of IE to support html5 elements (`<article>`, `<nav>`, `<header>` etc.). As these are only not supported by IE8 and earlier the following code is required to only use the polyfill when needed.
@@ -988,7 +988,7 @@ The placeholder-polyfill will be used to add support for placeholders in IE9 and
 
 
 ## Browser Support
-Officially the Better Boilerplate supports IE10+ and all of the other modern browsers. Support for IE8+ could be provided with some work providing fallbacks for SVG's. There are some tools included in the CSS framework for providing flexbox and grid fallbacks to earlier versions of IE and for the modern browsers yet to support CSS Grid (soon to be none, yey!).
+Officially the BetterBoilerplate supports IE10+ and all of the other modern browsers. Support for IE8+ could be provided with some work providing fallbacks for SVG's. There are some tools included in the CSS framework for providing flexbox and grid fallbacks to earlier versions of IE and for the modern browsers yet to support CSS Grid (soon to be none, yey!).
 
 
 - - - -

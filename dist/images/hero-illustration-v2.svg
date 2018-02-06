@@ -246,7 +246,7 @@
             var drawing = document.getElementsByClassName('draw');
 
             var intervalID = window.setInterval(animateForm, 11250);
-            var stopDrawing = window.setTimeout(removeDrawingClass, 3500);
+            var stopDrawing = window.setTimeout(removeDrawingClass, 4500);
 
             drawing = [].slice.call(drawing);
 
