@@ -595,81 +595,81 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-  font-size: 32.43658px;
-  font-size: 2.02729rem;
+  font-size: 32.4365844727px;
+  font-size: 2.0272865295rem;
   color: #E2007C; }
   @media (min-width: 569.536px) {
     h1,
     .h1 {
-      font-size: 39.31035px;
-      font-size: calc(1.39747vw + 24.47748px); } }
+      font-size: 39.3103528619px;
+      font-size: calc(1.3974709659vw + 24.4774842325px); } }
   @media (min-width: 1553.28px) {
     h1,
     .h1 {
-      font-size: 46.18412px;
-      font-size: 2.88651rem; } }
+      font-size: 46.1841212511px;
+      font-size: 2.8865075782rem; } }
 
 h2,
 .h2 {
-  font-size: 28.83252px;
-  font-size: 1.80203rem;
+  font-size: 28.8325195313px;
+  font-size: 1.8020324707rem;
   color: #E2007C; }
   @media (min-width: 569.536px) {
     h2,
     .h2 {
-      font-size: 30.63455px;
-      font-size: calc(0.36636vw + 26.74596px); } }
+      font-size: 30.634552002px;
+      font-size: calc(0.366362076vw + 26.7459556178px); } }
   @media (min-width: 1553.28px) {
     h2,
     .h2 {
-      font-size: 32.43658px;
-      font-size: 2.02729rem; } }
+      font-size: 32.4365844727px;
+      font-size: 2.0272865295rem; } }
 
 h3,
 .h3 {
-  font-size: 25.62891px;
-  font-size: 1.60181rem;
+  font-size: 25.62890625px;
+  font-size: 1.6018066406rem;
   color: #E2007C; }
   @media (min-width: 569.536px) {
     h3,
     .h3 {
-      font-size: 27.23071px;
-      font-size: calc(0.32566vw + 23.77418px); } }
+      font-size: 27.2307128906px;
+      font-size: calc(0.3256551787vw + 23.7741827714px); } }
   @media (min-width: 1553.28px) {
     h3,
     .h3 {
-      font-size: 28.83252px;
-      font-size: 1.80203rem; } }
+      font-size: 28.8325195313px;
+      font-size: 1.8020324707rem; } }
 
 h4,
 .h4 {
   font-size: 22.78125px;
-  font-size: 1.42383rem; }
+  font-size: 1.423828125rem; }
   @media (min-width: 569.536px) {
     h4,
     .h4 {
-      font-size: 24.20508px;
-      font-size: calc(0.28947vw + 21.13261px); } }
+      font-size: 24.205078125px;
+      font-size: calc(0.28947127vw + 21.1326069079px); } }
   @media (min-width: 1553.28px) {
     h4,
     .h4 {
-      font-size: 25.62891px;
-      font-size: 1.60181rem; } }
+      font-size: 25.62890625px;
+      font-size: 1.6018066406rem; } }
 
 h5,
 .h5 {
   font-size: 20.25px;
-  font-size: 1.26563rem; }
+  font-size: 1.265625rem; }
   @media (min-width: 569.536px) {
     h5,
     .h5 {
-      font-size: 21.51563px;
-      font-size: calc(0.25731vw + 18.78454px); } }
+      font-size: 21.515625px;
+      font-size: calc(0.2573077955vw + 18.7845394737px); } }
   @media (min-width: 1553.28px) {
     h5,
     .h5 {
       font-size: 22.78125px;
-      font-size: 1.42383rem; } }
+      font-size: 1.423828125rem; } }
 
 h6,
 .h6 {
@@ -679,12 +679,12 @@ h6,
     h6,
     .h6 {
       font-size: 19.125px;
-      font-size: calc(0.22872vw + 16.69737px); } }
+      font-size: calc(0.2287180405vw + 16.6973684211px); } }
   @media (min-width: 1553.28px) {
     h6,
     .h6 {
       font-size: 20.25px;
-      font-size: 1.26563rem; } }
+      font-size: 1.265625rem; } }
 
 textarea,
 select,
@@ -821,27 +821,27 @@ hr {
   background-color: #00930e; }
 
 .content-container {
-  max-width: 751.53311px;
+  max-width: 751.5331134256px;
   margin-left: auto;
   margin-right: auto; }
 
 .content-container--small {
-  max-width: 464.48276px;
+  max-width: 464.4827647871px;
   margin-left: auto;
   margin-right: auto; }
 
 .content-container--smallest {
-  max-width: 287.07217px;
+  max-width: 287.0721661231px;
   margin-left: auto;
   margin-right: auto; }
 
 .content-container--large {
-  max-width: 1215.98058px;
+  max-width: 1215.9805775226px;
   margin-left: auto;
   margin-right: auto; }
 
 .content-container--largest {
-  max-width: 1215.98058px;
+  max-width: 1215.9805775226px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -1180,7 +1180,7 @@ hr {
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0;
-  margin: 0 0.10113rem;
+  margin: 0 0.101125rem;
   width: 1.2135rem;
   height: 1.2135rem;
   text-indent: -9999px;
@@ -1238,22 +1238,22 @@ hr {
         display: -ms-grid;
         display: grid;
         grid-template-areas: "content sidebar";
-        -ms-grid-columns: minmax(auto, 60.71429%) minmax(auto, 39.28571%);
-            grid-template-columns: minmax(auto, 60.71429%) minmax(auto, 39.28571%);
+        -ms-grid-columns: minmax(auto, 60.7142857143%) minmax(auto, 39.2857142857%);
+            grid-template-columns: minmax(auto, 60.7142857143%) minmax(auto, 39.2857142857%);
         grid-column-gap: 3.236rem;
         margin-left: 0;
         margin-right: 0; } }
     .page-layout__main-container {
       font-size: 1rem;
       display: inline-block;
-      width: 64.28571%;
+      width: 64.2857142857%;
       padding-left: 0.809rem;
       padding-right: 1.618rem;
       vertical-align: top; }
       @supports (display: flex) {
         .page-layout__main-container {
-          -ms-flex: 0 0 64.28571%;
-              flex: 0 0 64.28571%;
+          -ms-flex: 0 0 64.2857142857%;
+              flex: 0 0 64.2857142857%;
           width: auto; } }
       @supports (display: grid) {
         .page-layout__main-container {
@@ -1265,14 +1265,14 @@ hr {
     .page-layout__sidebar-container {
       font-size: 1rem;
       display: inline-block;
-      width: 35.71429%;
+      width: 35.7142857143%;
       padding-left: 1.618rem;
       padding-right: 1.618rem;
       vertical-align: top; }
       @supports (display: flex) {
         .page-layout__sidebar-container {
-          -ms-flex: 0 0 35.71429%;
-              flex: 0 0 35.71429%;
+          -ms-flex: 0 0 35.7142857143%;
+              flex: 0 0 35.7142857143%;
           width: auto; } }
       @supports (display: grid) {
         .page-layout__sidebar-container {
@@ -1557,12 +1557,12 @@ input:checked + .radio__label::after {
     margin-bottom: 1.618rem; }
     @media (min-width: 569.536px) {
       .hero__title {
-        font-size: 42.16989px;
-        font-size: calc(3.31019vw + 7.03529px); } }
+        font-size: 42.1698892292px;
+        font-size: calc(3.3101882663vw + 7.0352861556px); } }
     @media (min-width: 1553.28px) {
       .hero__title {
-        font-size: 58.45178px;
-        font-size: 3.65324rem; } }
+        font-size: 58.4517784584px;
+        font-size: 3.6532361537rem; } }
     @media screen and (min-width: 569.536px) {
       .hero__title {
         margin-bottom: 4.045rem; } }
@@ -1664,7 +1664,7 @@ input:checked + .radio__label::after {
       text-decoration: none; }
 
 .nice-select {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
   border-radius: 0.4045rem;
   border: solid 1px #e8e8e8;
@@ -1675,7 +1675,7 @@ input:checked + .radio__label::after {
   font-size: 16px;
   font-weight: normal;
   height: 2.427rem;
-  line-height: 2.15733rem;
+  line-height: 2.1573333333rem;
   outline: none;
   padding-left: 0.809rem;
   padding-right: 1.618rem;
@@ -1748,7 +1748,7 @@ input:checked + .radio__label::after {
   .nice-select .option {
     cursor: pointer;
     font-weight: 400;
-    line-height: 2.15733rem;
+    line-height: 2.1573333333rem;
     list-style: none;
     min-height: 2.427rem;
     outline: none;
@@ -1793,7 +1793,7 @@ input:checked + .radio__label::after {
     cursor: pointer;
     background: #333;
     /* IE8 "hack" for nested featherlights */
-    background: transparent; }
+    background: rgba(0, 0, 0, 0); }
 
   /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
   .featherlight:last-of-type {
@@ -1907,7 +1907,7 @@ input:checked + .radio__label::after {
     -ms-user-select: none;
     user-select: none;
     /* IE9 hack, otherwise navigation doesn't appear */
-    background: transparent; }
+    background: rgba(0, 0, 0, 0); }
 
   .featherlight-previous {
     left: 25px;
